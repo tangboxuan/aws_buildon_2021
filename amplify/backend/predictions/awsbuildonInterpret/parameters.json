@@ -1,0 +1,13 @@
+{
+    "resourceName": "awsbuildonInterpret",
+    "interpretPolicyName": "interpretPolicy28c2b052",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "interpretType": "interpretText",
+    "type": "SENTIMENT",
+    "access": "authAndGuest"
+}

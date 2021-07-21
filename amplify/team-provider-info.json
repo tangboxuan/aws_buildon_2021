@@ -1,29 +1,32 @@
 {
-    "dev": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-awsbuildon-dev-105344-authRole",
-            "UnauthRoleArn": "arn:aws:iam::149500331451:role/amplify-awsbuildon-dev-105344-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::149500331451:role/amplify-awsbuildon-dev-105344-authRole",
-            "Region": "ap-southeast-1",
-            "DeploymentBucketName": "amplify-awsbuildon-dev-105344-deployment",
-            "UnauthRoleName": "amplify-awsbuildon-dev-105344-unauthRole",
-            "StackName": "amplify-awsbuildon-dev-105344",
-            "StackId": "arn:aws:cloudformation:ap-southeast-1:149500331451:stack/amplify-awsbuildon-dev-105344/90106a70-da17-11eb-b04a-0ac8d722349c",
-            "AmplifyAppId": "d3uu649e1f2o7k"
-        },
-        "categories": {
-            "function": {
-                "awsbuildonApiLambda": {
-                    "deploymentBucketName": "amplify-awsbuildon-dev-105344-deployment",
-                    "s3Key": "amplify-builds/awsbuildonApiLambda-4967596b4e4d2f444377-build.zip"
-                }
-            },
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "d3uu649e1f2o7k",
-                    "type": "manual"
-                }
-            }
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awsbuildon-dev-105344-authRole",
+      "UnauthRoleArn": "arn:aws:iam::149500331451:role/amplify-awsbuildon-dev-105344-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::149500331451:role/amplify-awsbuildon-dev-105344-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-awsbuildon-dev-105344-deployment",
+      "UnauthRoleName": "amplify-awsbuildon-dev-105344-unauthRole",
+      "StackName": "amplify-awsbuildon-dev-105344",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:149500331451:stack/amplify-awsbuildon-dev-105344/90106a70-da17-11eb-b04a-0ac8d722349c",
+      "AmplifyAppId": "d3uu649e1f2o7k"
+    },
+    "categories": {
+      "function": {
+        "awsbuildonApiLambda": {
+          "deploymentBucketName": "amplify-awsbuildon-dev-105344-deployment",
+          "s3Key": "amplify-builds/awsbuildonApiLambda-63684134574e6e584a48-build.zip"
         }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3uu649e1f2o7k",
+          "type": "manual"
+        }
+      },
+      "auth": {
+        "awsbuildonda723a68": {}
+      }
     }
+  }
 }
