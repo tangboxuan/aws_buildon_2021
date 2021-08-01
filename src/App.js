@@ -21,6 +21,7 @@ class App extends React.Component {
     this.getSentiment = this.getSentiment.bind(this);
     this.getRetype = this.getRetype.bind(this);
     this.getLowball = this.getLowball.bind(this);
+    this.streamReader = this.streamReader.bind(this);
   }
 
   onChange(event) {
@@ -69,16 +70,37 @@ class App extends React.Component {
     const comprehend = "https://dpomq4vx9e.execute-api.us-east-1.amazonaws.com/Comprehend-v1/retypecomprehend";
     fetch(comprehend, {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
       body: {
-        "body": "Thanks for the speedy replies! Hope you enjoy the product"
+        "body": this.state.retypeInput,
       }
     })
     .then(result => {
-      this.setState({retypeOutput:result.body});
+      console.log(result);
+      this.streamReader(result.body);
     })
     .catch(err => {
       console.log({ err });
+      this.setState({retypeOutput:this.state.retypeInput});
     });
+  }
+  streamReader = async (stream) => {
+    const reader = stream.getReader();
+    var finalString = ""
+    reader.read().then(
+      function processText({ done, value }) {
+        if (done) {
+          const string = String.fromCharCode.apply(null, value);
+          finalString = finalString.concat(string);
+          console.log(finalString)
+          return finalString;
+        }
+        const string = String.fromCharCode.apply(null, value);
+        finalString = finalString.concat(string);
+        return reader.read().then(processText);
+    })
   }
 
   render() {
