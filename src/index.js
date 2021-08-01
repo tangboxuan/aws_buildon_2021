@@ -7,12 +7,18 @@ import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify'
 import { AmazonAIPredictionsProvider } from '@aws-amplify/predictions';
 import config from './aws-exports'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 Amplify.configure(config)
 Amplify.addPluggable(new AmazonAIPredictionsProvider());
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+        <Route path='/' component={App} exact />
+      </Switch>
+    </Router>
+    {/* <App /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

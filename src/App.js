@@ -3,6 +3,8 @@ import './App.css';
 import { API } from 'aws-amplify'
 import Predictions from '@aws-amplify/predictions';
 
+
+import NavBar from './Navbar';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -82,6 +84,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <NavBar/>
         <header className="App-header">
           <form onSubmit={this.getLowball}>
             <textarea
