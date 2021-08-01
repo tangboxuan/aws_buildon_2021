@@ -9,6 +9,7 @@ class App extends React.Component {
     this.state = {
       sentimentInput: "",
       sentimentOutput: "",
+      retypeInput: "",
       lowballInput: "",
       lowballPrice: 0,
       lowballCutoff: 0,
@@ -16,6 +17,8 @@ class App extends React.Component {
     }
     this.onChange = this.onChange.bind(this);
     this.getSentiment = this.getSentiment.bind(this);
+    this.getRetype = this.getRetype.bind(this);
+    this.getLowball = this.getLowball.bind(this);
   }
 
   onChange(event) {
@@ -56,6 +59,23 @@ class App extends React.Component {
     .catch(err => {
       console.log({ err })
       if (TypeError) this.setState({sentimentOutput:'UNRECOGNISED'});
+    });
+  }
+
+  getRetype = async (event) => {
+    event.preventDefault();
+    const comprehend = "https://dpomq4vx9e.execute-api.us-east-1.amazonaws.com/Comprehend-v1/retypecomprehend";
+    fetch(comprehend, {
+      method: "POST",
+      body: {
+        "body": "Thanks for the speedy replies! Hope you enjoy the product"
+      }
+    })
+    .then(result => {
+      this.setState({retypeOutput:result.body});
+    })
+    .catch(err => {
+      console.log({ err });
     });
   }
 
@@ -102,9 +122,22 @@ class App extends React.Component {
               cols={30}
             />
             <br/>
-            <button type="submit">Get Sentiment</button>
+            <button type="submit">Get Comprehend Sentiment</button>
           </form>
           <h1>{this.state.sentimentOutput}</h1>
+          <form onSubmit={this.getRetype}>
+            <textarea
+              // type="textarea"
+              name="retypeInput"
+              required
+              onChange={this.onChange}
+              rows={3}
+              cols={30}
+            />
+            <br/>
+            <button type="submit">Get Retype Sentiment</button>
+          </form>
+          <h1>{this.state.retypeOutput}</h1>
         </header>
       </div>
   )};
