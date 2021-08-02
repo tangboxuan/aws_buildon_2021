@@ -3,8 +3,11 @@ import './App.css';
 import { API } from 'aws-amplify'
 import Predictions from '@aws-amplify/predictions';
 
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Home from './pages';
 
-import NavBar from './Navbar';
+// import NavBar from './Components/Navbar';
+// import Sidebar from './Components/Sidebar';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -108,8 +111,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <NavBar/>
-        <header className="App-header">
+        <Router>
+          <Switch>
+            <Route path='/' component={Home} exact />
+          </Switch>
+        </Router>   
+        {/* <header className="App-header">
           <form onSubmit={this.getLowball}>
             <textarea
               name="lowballInput"
@@ -165,7 +172,7 @@ class App extends React.Component {
             <button type="submit">Get Retype Sentiment</button>
           </form>
           <h1>{this.state.retypeOutput}</h1>
-        </header>
+        </header> */}
       </div>
   )};
 }
