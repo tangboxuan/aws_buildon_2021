@@ -73,17 +73,19 @@ class App extends React.Component {
       headers: {
         "Content-Type": "application/json"
       },
-      body: {
+      body: JSON.stringify({
         "body": this.state.retypeInput,
-      }
+      })
     })
     .then(result => {
       console.log(result);
-      this.streamReader(result.body);
+      // return this.streamReader(result.body);
+      return result.json();
     })
+    .then(result => this.setState({retypeOutput: result.body}))
     .catch(err => {
       console.log({ err });
-      this.setState({retypeOutput:this.state.retypeInput});
+      // this.setState({retypeOutput:this.state.retypeInput});
     });
   }
   streamReader = async (stream) => {
