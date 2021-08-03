@@ -4,6 +4,9 @@ import Sidebar from '../Components/Sidebar';
 import HeroSection from '../Components/HeroSection'
 import InfoSection from '../Components/InfoSection'
 import { homeObjOne , homeObjTwo, homeObjThree} from '../Components/InfoSection/Data';
+import LowBall from '../Components/Query/lowball';
+import Retype from '../Components/Query/retype';
+import Sentiment from '../Components/Query/sentiment';
 
 function Home() {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +22,9 @@ function Home() {
         <InfoSection {...homeObjOne} />
         <InfoSection {...homeObjTwo} />
         <InfoSection {...homeObjThree} />
+        <LowBall/>
+        <Sentiment/>
+        <Retype/>
       </>
     );
   }
