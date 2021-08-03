@@ -45,6 +45,7 @@ import {
               onClick={toggle}
               smooth={true}
               duration={500}
+              
               spy={true}
               exact='true'
               offset={-80}
@@ -53,7 +54,7 @@ import {
             </SidebarLink>
           </SidebarMenu>
           <SideBtnWrap>
-            <SidebarRoute to='figma'>To Figma UI</SidebarRoute>
+            <SidebarRoute to ={{ pathname: "https://www.figma.com/proto/I7hPeR8rNpnsCFhkYFVqit/Carousell-Build-On-hackathon?node-id=0%3A1" }} target="_parent">To Figma UI</SidebarRoute>
           </SideBtnWrap>
         </SidebarWrapper>
       </SidebarContainer>
