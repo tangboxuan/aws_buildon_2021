@@ -67,7 +67,7 @@ class App extends React.Component {
 
   getRetype = async (event) => {
     event.preventDefault();
-    const comprehend = "https://dpomq4vx9e.execute-api.us-east-1.amazonaws.com/Comprehend-v1/retypecomprehend";
+    const comprehend = "https://qy9oimwbr2.execute-api.us-east-1.amazonaws.com/retypecomprehend/comprehend";
     fetch(comprehend, {
       method: "POST",
       headers: {
