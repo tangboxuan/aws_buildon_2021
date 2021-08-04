@@ -3,7 +3,14 @@ import Navbar from '../Components/Navbar';
 import Sidebar from '../Components/Sidebar';
 import HeroSection from '../Components/HeroSection'
 import InfoSection from '../Components/InfoSection'
-import { homeObjOne , homeObjTwo, homeObjThree} from '../Components/InfoSection/Data';
+import { homeObjOne} from '../Components/InfoSection/Data';
+import TestingSection from '../Components/InfoSection';
+import { testObjOne,testObjTwo } from '../Components/TestingSection/Data'
+
+
+// import LowBall from '../Components/Query/lowball';
+// import Retype from '../Components/Query/retype';
+// import Sentiment from '../Components/Query/sentiment';
 
 function Home() {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,8 +24,9 @@ function Home() {
         <Navbar toggle={toggle} />
         <HeroSection/>
         <InfoSection {...homeObjOne} />
-        <InfoSection {...homeObjTwo} />
-        <InfoSection {...homeObjThree} />
+        <TestingSection {...testObjOne} />
+        <TestingSection {...testObjTwo} />
+        
       </>
     );
   }
