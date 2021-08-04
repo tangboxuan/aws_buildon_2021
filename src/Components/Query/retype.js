@@ -51,9 +51,13 @@ class Retype extends React.Component {
               cols={30}
             />
             <br/>
-            <button type="submit">Get Retype Sentiment</button>
+            <button style={{height:"44px", 
+            width:"250px", background: "#01BF71", padding: "2px 5px",
+            borderRadius:"50px", border: "none", fontSize:"16px"}} type="submit">
+                Get Retype Sentiment
+            </button>
           </form>
-          <h1>{this.state.retypeOutput}</h1>
+          <h1 style={{height:"40px"}}>{this.state.retypeOutput}</h1>
       </div>
   )};
 }

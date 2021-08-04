@@ -64,7 +64,11 @@ class LowBall extends React.Component {
                     onChange={this.onChange}
                 />
                 <br/>
-                <button type="submit">Get Lowball</button>
+                <button style={{height:"44px", 
+            width:"250px", background: "#01BF71", padding: "2px 5px",
+            borderRadius:"50px", border: "none", fontSize:"16px"}} type="submit">
+                  Get Lowball
+                </button>
               </form>
               <h1>{this.state.lowballOutput}</h1>
             </div>
