@@ -8,6 +8,9 @@ import { Amplify } from 'aws-amplify'
 import { AmazonAIPredictionsProvider } from '@aws-amplify/predictions';
 import config from './aws-exports'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 Amplify.configure(config)
 Amplify.addPluggable(new AmazonAIPredictionsProvider());
 
