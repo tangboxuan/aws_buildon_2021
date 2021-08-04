@@ -44,6 +44,8 @@ class Sentiment extends React.Component {
             <form onSubmit={this.getSentiment}>
                 <textarea
                 name="sentimentInput"
+                className="form-control"
+                placeholder="Enter message"
                 required
                 onChange={this.onChange}
                 rows={3}
@@ -52,11 +54,13 @@ class Sentiment extends React.Component {
                 <br/>
                 <button style={{height:"44px", 
             width:"250px", background: "#01BF71", padding: "2px 5px",
-            borderRadius:"50px", border: "none", fontSize:"16px"}} type="submit">
+            borderRadius:"50px", border: "none", fontSize:"16px"}} 
+            className="btn"
+            type="submit">
                     Get Comprehend Sentiment
                 </button>
             </form>
-            <h1 style={{height:"40px"}}>{this.state.sentimentOutput}</h1>
+            <h1 style={{marginTop:"10px", height:"40px"}}>{this.state.sentimentOutput}</h1>
         </div>
     )};
 }

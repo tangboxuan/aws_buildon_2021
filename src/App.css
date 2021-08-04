@@ -46,5 +46,19 @@
 }
 
 .Lowball {
-  width: 350px;
+  min-width: 350px;
+  width: 0.9vw;
 }
+
+.Friendliness {
+  color: white;
+  font-family: "Encode Sans Expanded";
+  min-width: 410px;
+  width: 0.9vw;
+}
+
+.bqyFyo {
+  display: flex;
+  justify-content: center;
+}
+

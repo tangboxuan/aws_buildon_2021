@@ -1,9 +1,9 @@
 //a way to create usable components
 //can pass in different values, and can update design of website without having to hard-code in the properties --> reusable
 
-import LowBall from '../Query/LowBall';
-import Retype from '../Query/Retype';
-import Sentiment from '../Query/Sentiment';
+import LowBall from '../Query/lowball';
+import Retype from '../Query/retype';
+import Sentiment from '../Query/sentiment';
 
 export const testObjOne = {
     id: 'low-balling',
@@ -25,9 +25,9 @@ export const testObjOne = {
 
 const friendlinessModels = () => {
     return (
-        <div style={{color: "white", fontFamily: "Encode Sans Expanded"}}>
+        <div className = 'Friendliness' >
             
-            <div style={{marginBottom: "30px"}}>
+            <div style={{marginBottom: "25px"}}>
                 <h2 style={{marginBottom: "10px", color:"#01BF71"}} >AWS Comprehend Model</h2>
                 <Sentiment />
             </div>

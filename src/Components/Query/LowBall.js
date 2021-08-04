@@ -73,7 +73,7 @@ class LowBall extends React.Component {
                       type="number"
                       step=".01"
                       className="form-control"
-                      placeholder="Offer Made"
+                      placeholder="E.g. 0.6"
                       name="lowballCutoff"
                       required
                       onChange={this.onChange}

@@ -1,5 +1,3 @@
-//Retype
-
 import React from "react";
 
 class Retype extends React.Component {
@@ -48,6 +46,8 @@ class Retype extends React.Component {
               // type="textarea"
               name="retypeInput"
               required
+              className="form-control"
+              placeholder="Enter message"
               onChange={this.onChange}
               rows={3}
               cols={30}
@@ -55,7 +55,9 @@ class Retype extends React.Component {
             <br/>
             <button style={{height:"44px", 
             width:"250px", background: "#01BF71", padding: "2px 5px",
-            borderRadius:"50px", border: "none", fontSize:"16px"}} type="submit">
+            borderRadius:"50px", border: "none", fontSize:"16px"}} 
+            className="btn"
+            type="submit">
                 Get Retype Sentiment
             </button>
           </form>

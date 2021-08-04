@@ -1,3 +1,4 @@
+//LowBall
 import React from "react";
 import { API } from 'aws-amplify'
 
@@ -37,32 +38,48 @@ class LowBall extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className = 'Lowball'>
               <form onSubmit={this.getLowball}>
+      
+                <label className="input-group-text">Message</label>
                 <textarea
+                  class="form-control"
                   name="lowballInput"
+                  placeholder="Enter message"
                   required
                   onChange={this.onChange}
                   rows={3}
                   cols={30}
                 />
+              
                 <br/>
-                <label>List Price: </label>
-                <input
-                    type="number"
-                    name="lowballPrice"
-                    required
-                    onChange={this.onChange}
-                />
+                <div className="input-group">
+                  <label style={{width:"110px"}} class="input-group-text">List Price: </label>
+                  <input
+                      className="form-control"
+                      placeholder="Original Price"
+                      type="number"
+                      name="lowballPrice"
+                      required
+                      onChange={this.onChange}
+                  />
+                </div>
+                
                 <br/>
-                <label>Cutoff: </label>
-                <input
-                    type="number"
-                    step=".01"
-                    name="lowballCutoff"
-                    required
-                    onChange={this.onChange}
-                />
+
+                <div className="input-group">
+                  <label style={{width:"110px"}} class="input-group-text">Cutoff: </label>
+                  <input
+                      type="number"
+                      step=".01"
+                      className="form-control"
+                      placeholder="E.g. 0.6"
+                      name="lowballCutoff"
+                      required
+                      onChange={this.onChange}
+                  />
+                </div>
+                
                 <br/>
                 <button style={{height:"44px", 
             width:"250px", background: "#01BF71", padding: "2px 5px",

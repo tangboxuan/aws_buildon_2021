@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button } from '../ButtonElements';
 
-import LowBall from '../Query/LowBall';
-import Retype from '../Query/Retype';
-import Sentiment from '../Query/Sentiment';
+import LowBall from '../Query/lowball';
+import Retype from '../Query/retype';
+import Sentiment from '../Query/sentiment';
 
 import {
   InfoContainer,

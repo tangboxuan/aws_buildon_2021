@@ -8,9 +8,6 @@ import TestingSection from '../Components/TestingSection';
 import { testObjOne,testObjTwo } from '../Components/TestingSection/Data'
 
 
-// import LowBall from '../Components/Query/lowball';
-// import Retype from '../Components/Query/retype';
-// import Sentiment from '../Components/Query/sentiment';
 
 function Home() {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,11 +24,9 @@ function Home() {
 
         <TestingSection {...testObjOne} />
         <TestingSection {...testObjTwo} />
-        <InfoSection {...homeObjTwo} />
-        <InfoSection {...homeObjThree} />
-        <LowBall/>
-        <Sentiment/>
-        <Retype/>
+        {/* <InfoSection {...homeObjTwo} />
+        <InfoSection {...homeObjThree} /> */}
+  
 
       </>
     );
