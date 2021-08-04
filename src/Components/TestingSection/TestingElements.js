@@ -45,6 +45,7 @@ export const Column2 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col2;
+  color: black;
 `;
 
 export const TextWrapper = styled.div`

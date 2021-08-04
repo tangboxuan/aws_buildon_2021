@@ -15,12 +15,29 @@ export const testObjOne = {
     description: "The anti low-balling feature prevents buyers from making a ridiculously low offer to the seller (e.g. 10% of the original price), regardless of the buyer’s intention (e.g.trolling, genuine offer). This prevents the seller from responding with a strong rebuke which may potentially spark a hostile conversation",
     buttonLabel: 'lowball test',
     imgStart: true,
-    model: LowBall,
+    ModelForm: LowBall,
     alt: 'image',
     dark: false,
     primary: false,
     darkText: true
 };
+
+
+const friendlinessModels = () => {
+    return (
+        <div style={{color: "white", fontFamily: "Encode Sans Expanded"}}>
+            
+            <div style={{marginBottom: "30px"}}>
+                <h2 style={{marginBottom: "10px", color:"#01BF71"}} >AWS Comprehend Model</h2>
+                <Sentiment />
+            </div>
+            <div>
+                <h2 style={{marginBottom: "10px", color:"#01BF71"}} >Our Comprehend Model</h2>
+                <Retype />
+            </div>
+        </div>
+    )
+}
 
 
 export const testObjTwo = {
@@ -33,7 +50,7 @@ export const testObjTwo = {
     description: "Explanation of sentiment analysis",
     buttonLabel: 'Our Document',
     imgStart: false,
-    model: Retype,
+    ModelForm: friendlinessModels,
     alt: 'sentiment test',
     dark: true,
     primary: true,

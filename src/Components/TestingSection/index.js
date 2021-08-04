@@ -28,7 +28,7 @@ const TestingSection = ({
   headline,
   description,
   buttonLabel,
-  model,
+  ModelForm,
   alt,
   id,
   primary,
@@ -65,9 +65,7 @@ const TestingSection = ({
               </TextWrapper>
             </Column1>
             <Column2>
-              <model>
-
-              </model>
+              <ModelForm />
             </Column2>
           </InfoRow>
         </InfoWrapper>

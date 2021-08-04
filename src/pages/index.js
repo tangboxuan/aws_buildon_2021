@@ -4,7 +4,7 @@ import Sidebar from '../Components/Sidebar';
 import HeroSection from '../Components/HeroSection'
 import InfoSection from '../Components/InfoSection'
 import { homeObjOne} from '../Components/InfoSection/Data';
-import TestingSection from '../Components/InfoSection';
+import TestingSection from '../Components/TestingSection';
 import { testObjOne,testObjTwo } from '../Components/TestingSection/Data'
 
 
