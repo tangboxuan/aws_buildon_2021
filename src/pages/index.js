@@ -24,11 +24,19 @@ function Home() {
         <Navbar toggle={toggle} />
         <HeroSection/>
         <InfoSection {...homeObjOne} />
+
         <TestingSection {...testObjOne} />
         <TestingSection {...testObjTwo} />
-        
+        <InfoSection {...homeObjTwo} />
+        <InfoSection {...homeObjThree} />
+        <LowBall/>
+        <Sentiment/>
+        <Retype/>
+
       </>
     );
   }
+
+
 
   export default Home;
