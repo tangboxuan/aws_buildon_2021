@@ -84,7 +84,9 @@ const Navbar = ({toggle}) => {
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to={{ pathname: "https://www.figma.com/proto/I7hPeR8rNpnsCFhkYFVqit/Carousell-Build-On-hackathon?node-id=0%3A1" }} 
+              <NavBtnLink 
+              onClick = {event => window.open("https://www.figma.com/proto/I7hPeR8rNpnsCFhkYFVqit/Carousell-Build-On-hackathon?node-id=0%3A1", "_blank")}
+               
               target="_parent">Figma UI</NavBtnLink>
             </NavBtn>
           </NavbarContainer>

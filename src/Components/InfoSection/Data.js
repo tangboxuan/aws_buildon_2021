@@ -26,7 +26,7 @@ export const homeObjTwo = {
     topLine: 'Solution 1',
     headline: 'Our Anti Low-Balling Feature',
     description: "The anti low-balling feature prevents buyers from making a ridiculously low offer to the seller (e.g. 10% of the original price), regardless of the buyer’s intention (e.g.trolling, genuine offer). This prevents the seller from responding with a strong rebuke which may potentially spark a hostile conversation",
-    buttonLabel: 'lowball test',
+    buttonLabel: 'Our Document',
     imgStart: true,
     img: 'images/undraw_mobile_prototyping_grmd.svg',
     alt: 'image',

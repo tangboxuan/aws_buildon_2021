@@ -44,7 +44,8 @@ const InfoSection = ({
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <Button
-                    to='home'
+                    type="button"
+                    onClick={event => window.open('https://drive.google.com/file/d/1ioo0tkl_QCmeo6g1G4QjHFtoR8K0Dp3U/view?usp=sharing', "_blank")}
                     smooth={true}
                     duration={500}
                     spy={true}
