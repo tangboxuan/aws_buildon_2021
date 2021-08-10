@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/model",
+      "lambdaFunction": "awsbuildonApiLambda",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/model"
+    }
+  ],
+  "resourceName": "awsbuildonApi",
+  "apiName": "awsbuildonApi",
+  "functionArns": [
+    {
+      "lambdaFunction": "awsbuildonApiLambda"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-awsbuildon-dev-105344-authRole",
+    "unAuthRoleName": "amplify-awsbuildon-dev-105344-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "awsbuildonApiLambda",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
